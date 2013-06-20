@@ -3,8 +3,8 @@ Contributors: Maxime Dizerens
 Donate link: http://www.gunners.fr/
 Tags: phpleague, football, sport, league, championship, soccer, handball, volleyball, basketball, hockey, sports, leagues
 Requires at least: 3.3
-Tested up to: 3.3.1
-Stable tag: 1.4.6
+Tested up to: 3.5
+Stable tag: 1.4.7
 
 PHPLeague lets you managing your leagues without any hassles.
 
@@ -29,7 +29,6 @@ Requires WordPress 3.3+ and PHP 5.2+.
 
 **Coming features**
 
-* A prediction module
 * More and more statistics
 * More and more sports
 * A complete team dashboard section
@@ -46,7 +45,7 @@ http://twitter.com/mdizerens
 
 **Languages**
 
-* This plugin is currently available in English, French, German and Polish. Please help me translate it!
+* This plugin is currently available in English, French, German, Portuguese, Spanish and Polish. Please help me translate it!
 
 == Installation ==
 
@@ -97,11 +96,15 @@ For more information, check out the PHPLeague project website: <https://github.c
 
 == Changelog ==
 
+= 1.4.7 =
+* FIX: Missing argument wpdb: in 3.5 final
+
 = 1.4.6 =
 * CHG: All characters are authorized
 * FIX: Database structure upgrade system has been improved
 * NEW: Database structure checking system
-* NEW: Spanish language is now available
+* NEW: Spanish is now available
+* NEW: Portuguese is now available
 
 = 1.4.5 =
 * NEW: Polish language is now available

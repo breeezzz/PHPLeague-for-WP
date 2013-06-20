@@ -10,11 +10,14 @@
  */
 
 // ID Fixture
-$id_fixture = ( ! empty($_GET['id_fixture']) && $db->is_fixture_exists($_GET['id_fixture']) === TRUE)
+$id_fixture = ( ! empty($_GET['id_fixture']) && $db->is_fixture_exists($_GET['id_fixture'], $id_league) === TRUE)
     ? (int) $_GET['id_fixture'] : 1;
 
 if ($db->is_league_exists($id_league) === FALSE)
     wp_die(__('We did not find the league in the database.', 'phpleague'));
+
+if ($db->is_fixture_exists($_GET['id_fixture'], $id_league) !== TRUE)
+    $message[] = __('The fixture does not exist. Please resave fixtures.', 'phpleague');
 
 // Variables
 $league_name = $db->return_league_name($id_league);
@@ -31,6 +34,9 @@ $menu        = array(
     __('Matches', 'phpleague')  => admin_url('admin.php?page=phpleague_overview&option=match&id_league='.$id_league),
     __('Results', 'phpleague')  => '#',
     __('Settings', 'phpleague') => admin_url('admin.php?page=phpleague_overview&option=setting&id_league='.$id_league)
+    // tim modified - 1
+    , __('Generate', 'phpleague') => admin_url('admin.php?page=phpleague_overview&option=generator&id_league='.$id_league)
+    // tim modified - 0    
 );
 
 // Data processing...
