@@ -1,5 +1,5 @@
 === PHPLeague ===
-Contributors: Maxime Dizerens
+Contributors: Maxime Dizerens, Timothy Lim
 Donate link: http://www.gunners.fr/
 Tags: phpleague, football, sport, league, championship, soccer, handball, volleyball, basketball, hockey, sports, leagues
 Requires at least: 3.3
@@ -95,6 +95,10 @@ For more information, check out the PHPLeague project website: <https://github.c
 3. PHPLeague Administration Dashboard
 
 == Changelog ==
+
+= 1.4.7.1 =
+* FIX: Missing argument 2 in is_fixture_exists()
+* https://github.com/thewheat/PHPLeague-for-WP/issues/7
 
 = 1.4.7 =
 * FIX: Missing argument wpdb: in 3.5 final
